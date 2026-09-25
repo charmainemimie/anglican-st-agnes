@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Liturgical blue and white for the guild; red, amber and green carry payment status.
+   Atkinson Hyperlegible was designed for low-vision readers: clear on cheap phone screens. */
+:root {
+  --bg:#F3F6FA; --surface:#FFFFFF; --soft:#EAEFF6; --ink:#15213A; --muted:#566381; --line:#D6DDE8;
+  --blue:#1E3F7C; --onblue:#FFFFFF;
+  --owe:#B42318; --owe-soft:#FCE9E7; --paid:#1B7343; --paid-soft:#E2F2E8;
+  --part:#9A5B0B; --part-soft:#FCF1DC; --future:#EEF1F6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#0E1420; --surface:#161F31; --soft:#1F2A40; --ink:#E6EBF4; --muted:#9BA7BE; --line:#2A3651;
+    --blue:#8EAEEC; --onblue:#0E1420;
+    --owe:#F28B80; --owe-soft:#3A1C1C; --paid:#6ED29B; --paid-soft:#15331F;
+    --part:#E9B45A; --part-soft:#382A13; --future:#1A2335;
+  }
+}
+html, body, #root { min-height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: "Atkinson Hyperlegible", system-ui, sans-serif; font-size: 16px; }
+.safe-bottom { padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1.25rem); }
+.safe-top { padding-top: env(safe-area-inset-top, 0px); }

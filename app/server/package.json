@@ -1,0 +1,23 @@
+{
+  "name": "st-agnes-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "NODE_ENV=production node src/index.js",
+    "create-admin": "node src/scripts/createAdmin.js",
+    "test": "node --test src/lib/*.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.8.0",
+    "zod": "^3.23.8"
+  }
+}
